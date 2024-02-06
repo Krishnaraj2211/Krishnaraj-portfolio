@@ -1,9 +1,136 @@
-*{
+.btn:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    color: #333; /* Change text color on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+* {
     font-family: 'Poppins', sans-serif;
 }
-.banner{
-    background-image:url(../images/slide.jpg);
+
+.banner {
+    background-image: url(../images/slide.jpg);
     background-size: cover;
-    background-repeat: no;
-    padding:235px;
+    background-repeat: no-repeat;
+    padding: 235px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .banner {
+        padding: 100px; /* Adjust padding for smaller screens */
+    }
+}
+
+.banner h1 span {
+    color: hsla(60, 92%, 53%, 0.827);
+}
+
+/* Define a keyframe animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the banner heading */
+.banner-heading {
+    animation: fadeIn 1s ease-in-out; /* Apply the fadeIn animation with a duration of 1 second */
+}
+/* Style for navigation links */
+.navbar-nav .nav-link {
+    color: #0e0606; /* Default text color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Hover effect for navigation links */
+.navbar-nav .nav-link:hover {
+    color: hsla(60, 92%, 53%, 0.827); /* Change text color on hover */
+}
+/* Scroll-to-Top Button Styles */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #f0f0f0;
+}
+/* CSS for Button Hover Effect */
+#contact{
+    background: #ffffff;
+    padding-top: 50px;
+}
+/* Animated background for a section */
+.section-with-animated-bg {
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    animation: animateBackground 10s ease infinite alternate;
+}
+
+@keyframes animateBackground {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}
+/* Image hover effect */
+.img-hover-effect {
+    transition: transform 0.3s ease;
+}
+
+.img-hover-effect:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+    /* Add more styles as needed */
+}
+/* Animated progress bars */
+.progress-bar {
+    width: 0%;
+    transition: width 1s ease-in-out;
+}
+
+/* Animate progress bars on scroll */
+@keyframes animateProgressBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 75%; /* Change to desired percentage */
+    }
+}
+
+.progress-bar.animated {
+    animation: animateProgressBar 1s forwards;
+}
+/* Styles for modal windows */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Show modal when clicked */
+.modal.active {
+    display: block;
 }
